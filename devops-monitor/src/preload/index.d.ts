@@ -1,5 +1,5 @@
 import { ElectronAPI } from '@electron-toolkit/preload'
-import type { AppSettings } from './src/renderer/src/types'
+import type { AppSettings } from '../renderer/src/types'
 
 export interface RendererAPI {
   // API server
