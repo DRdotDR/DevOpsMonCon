@@ -5,6 +5,7 @@ import icon from '../../resources/icon.png?asset'
 
 // start built-in mock API server for development/testing
 import { startMockServer } from './mock-server'
+import { setupIPC } from './ipc-handlers'
 
 function createWindow(): void {
   // Create the browser window.
@@ -54,6 +55,9 @@ app.whenReady().then(() => {
 
   // IPC test
   ipcMain.on('ping', () => console.log('pong'))
+
+  // Setup IPC handlers
+  setupIPC()
 
   // start the mock backend before opening the window
   startMockServer()
